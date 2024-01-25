@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Registration page</title>
+        <link rel="stylesheet" href="cssforregister1.css">
+    </head>
+	<script language="javascript">
+	function validate()
+	{
+	  var name=document.f1.username.value;
+	  if(name=="")
+	  {
+		alert("Pls Enter Name!");
+		document.f1.username.focus;
+		return false;
+	  }
+	  var pass=document.f1.Password.value;
+	  if(pass=="")
+	  {
+		alert("Pls Enter Passsword!");
+		document.f1.Password.focus;
+		return false;
+	  }
+	  var email=document.f1.email.value;
+	  if(email=="")
+	  {
+ 		alert("Pls Enter a correct E-Mail!");
+		document.f1.email.focus;
+		return false;
+	  }
+	  var phno=document.f1.Phno.value;
+	  if(phno==""|| phno.length!=10)
+	  {
+		alert("Pls enter a 10-digit phone number!");
+		document.f1.Phno.focus;
+		return false;
+	  }
+	}
+	</script>
+
+    <body>
+        <div class="regframe">
+            <h2><u>Registration Form</u></h2>
+            <form name="f1" action="insert.php" method="post" onsubmit="javascript:return validate()">
+                <label for="username">Username</label>
+                <input type="text" class="username" name="username">
+		<label for="Password">Password</label>
+		<input type="password" class="Password" name="Password">
+                <label for="email">E-Mail</label>
+                <input type="email" class="email" name="email" >
+                <label for="Phno">Phone Number</label>
+                <input type="text" class="Phno" name="Phno" > 
+		<input type="submit" value="Register">
+		<input type="reset" value="Reset">
+            </form>
+        </div>
+    </body>
+</html>

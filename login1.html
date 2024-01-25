@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>LOGIN PAGE</title>
+<script language="javascript">
+function validate()
+{
+var name=document.f1.username.value;
+if(name=="")
+{
+alert("Pls Enter Name!");
+document.f1.username.focus;
+return false;
+}
+var pass=document.f1.password.value;
+if(pass=="")
+{
+alert("Pls Enter Passsword!");
+document.f1.password.focus;
+return false;
+}
+}
+</script>
+</head>
+<body>
+<center>
+<h3><u>LOGIN PAGE</u></h3>
+<form name="f1" action="#" method="post" onsubmit="javascript:return validate()">
+<table frame="border">
+<tr>
+<td>USER NAME:</td>
+<td><input type="text" name="username"></td>
+</tr>
+<tr>
+<td>PASSWORD:</td>
+<td><input name="password" type="password"></td>
+</tr>
+<tr>
+<td align="center" colspan="2" ><input type="submit" value="SUBMIT" ><input type="reset" value="RESET"></td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>
